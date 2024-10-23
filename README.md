@@ -176,9 +176,6 @@ public class Sample : PageModel
             storeId: "amzn1.application-oa2-client.000000000000000000000000000000000"
         );
 
-        // generate the button signature
-        var signature = client.GenerateButtonSignature(request);
-
         // generate the signature and payload string that is passed back to the frontend
         Signature = client.GenerateButtonSignature(request);
         Payload = request.ToJson();
@@ -215,9 +212,6 @@ public class Sample : PageModel
         request.RecurringMetadata.Frequency.Value = 2;
         request.RecurringMetadata.Amount.Amount = 12.34m;
         request.RecurringMetadata.Amount.CurrencyCode = Currency.USD;
-
-        // generate the button signature
-        var signature = client.GenerateButtonSignature(request);
 
         // generate the signature and payload string that is passed back to the frontend
         Signature = client.GenerateButtonSignature(request);
@@ -316,9 +310,6 @@ public class Sample : PageModel
         request.AddressDetails.CountryCode = "US";
         request.AddressDetails.PhoneNumber = "212555555";
 
-        // generate the button signature
-        var signature = client.GenerateButtonSignature(request);
-
         // generate the signature and payload string that is passed back to the frontend
         Signature = client.GenerateButtonSignature(request);
         Payload = request.ToJson();
@@ -351,9 +342,6 @@ public class Sample : PageModel
             storeId: "amzn1.application-oa2-client.000000000000000000000000000000000",
             signInScopes: scopes
         );
-
-        // generate the button signature
-        var signature = client.GenerateButtonSignature(request);
 
         // generate the signature and payload string that is passed back to the frontend
         Signature = client.GenerateButtonSignature(request);
